@@ -6,6 +6,8 @@ $author =$_POST['authorName'];
 $available=$_POST['available'];
 $pages=$_POST['pages'];
 $isbn=$_POST['isbn'];
+
+$index=$_POST['indexToEdit'];
 ?>
 <?php
   if($bookJson)
@@ -18,7 +20,7 @@ $isbn=$_POST['isbn'];
       'isbn' => $isbn,
     ];
 
-    $bookJson[] = $newBookArray; # append new book info
+    $bookJson[$index] = $newBookArray; # instead of appending, update book info at that index
 
     $bookJson = json_encode($bookJson); # convert php array to json
 
