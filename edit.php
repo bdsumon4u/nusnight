@@ -15,7 +15,8 @@ $bookToEdit = $bookJson[$index];
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="createProcess.php">
+<form method="post" action="editProcess.php">
+    <input type="hidden" name="indexToEdit" value="<?php echo $index ?>">
     <label for:title>Title : </label>
 <input type="text" name="title" value="<?php echo $bookToEdit['title'] ?>" placeholder="Type title"required>
 <br>
