@@ -10,7 +10,9 @@ $bookJson = json_decode($json, true);
         <th>Available</th>
         <th>Pages</th>
         <th>Isbn</th>
+        <th>Actions</th>
     </tr>
+    <?php $index = 0; ?>
     <?php foreach ($bookJson as $p) {
     ?>
         <tr>
@@ -19,8 +21,12 @@ $bookJson = json_decode($json, true);
             <td><?php echo $p['available']; ?></td>
             <td><?php echo $p['pages']; ?></td>
             <td><?php echo $p['isbn']; ?></td>
+            <td>
+                <a href="edit.php?index=<?php echo $index ?>">Edit</a>
+            </td>
         </tr>
     <?php
+        $index++;
     }
 
     ?>
