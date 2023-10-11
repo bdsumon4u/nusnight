@@ -7,15 +7,7 @@ $index=$_POST['index'];
 <?php
   if($bookJson)
   {
-    $newBookArray = [
-      'title' => $title,
-      'author' => $author,
-      'available' => $available,
-      'pages' => $pages,
-      'isbn' => $isbn,
-    ];
-
-    $bookJson[$index] = $newBookArray; # instead of appending, update book info at that index
+    unset($bookJson[$index]); # delete that index
 
     $bookJson = json_encode($bookJson); # convert php array to json
 
