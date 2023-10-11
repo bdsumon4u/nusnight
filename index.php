@@ -1,11 +1,6 @@
 <?php
 $json = file_get_contents('books.json');
 $bookJson = json_decode($json, true);
-$title = $_POST['title'];
-$author = $_POST['authorName'];
-$available = $_POST['available'];
-$available = $_POST['pages'];
-$available = $_POST['isbn'];
 ?>
 <table border="1" width="900">
     <tr>
@@ -30,9 +25,3 @@ $available = $_POST['isbn'];
     ?>
 
 </table>
-<?php
-if ($bookJson) {
-    echo "success";
-} else
-    echo "Failed";
-?>
