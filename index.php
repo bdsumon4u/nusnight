@@ -2,6 +2,7 @@
 $json = file_get_contents('books.json');
 $bookJson = json_decode($json, true);
 ?>
+<a href="form.php">Add Book</a>
 <table border="1" width="900">
     <tr>
         <th>Title</th>
