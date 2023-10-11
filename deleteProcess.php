@@ -1,13 +1,8 @@
 <?php
 $json =file_get_contents('books.json');
 $bookJson =json_decode($json,true);
-$title = $_POST['title'];
-$author =$_POST['authorName'];
-$available=$_POST['available'];
-$pages=$_POST['pages'];
-$isbn=$_POST['isbn'];
 
-$index=$_POST['indexToEdit'];
+$index=$_POST['index'];
 ?>
 <?php
   if($bookJson)
