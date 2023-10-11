@@ -23,6 +23,11 @@ $bookJson = json_decode($json, true);
             <td><?php echo $p['isbn']; ?></td>
             <td>
                 <a href="edit.php?index=<?php echo $index ?>">Edit</a>
+
+                <form action="deleteProcess.php" method="POST">
+                    <input type="hidden" name="index" value="<?php echo $index ?>">
+                    <button type="submit">Delete</button>
+                </form>
             </td>
         </tr>
     <?php
